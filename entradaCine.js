@@ -42,7 +42,7 @@ function calcularPrecioEntrada(edad, diaSemana, esEstudiante) {
     );
   } else {
     console.log("Dia de la semana no valido");
-    return;
+    return null;
   }
 
   if (edad < 12 || edad > 65) {
@@ -65,4 +65,4 @@ function calcularPrecioEntrada(edad, diaSemana, esEstudiante) {
   console.log("El precio final de la entrada es: " + valorEntrada);
 }
 
-calcularPrecioEntrada(20, "Miercoles", true);
+console.log(calcularPrecioEntrada(20, "Miercoles", true));
