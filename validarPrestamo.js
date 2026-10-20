@@ -27,27 +27,23 @@ function evaluarPrestamo(sueldoMensual, historialCrediticio, edad) {
     console.log(
       "Préstamo rechazado: No cumple con la edad permitida (18-70 años)",
     );
-    return aprobado;
   } else {
     if (sueldoMensual < 400000) {
       console.log("Préstamo rechazado: Ingresos insuficientes");
-      return aprobado;
     } else if (sueldoMensual >= 800000) {
       aprobado = true;
       console.log("Préstamo aprobado: Sueldo mayor a $800,000");
-      return aprobado;
     } else if (sueldoMensual >= 400000 && sueldoMensual < 800000) {
       if (historialCrediticio) {
         aprobado = true;
         console.log("Préstamo aprobado: Historial crediticio bueno");
-        return aprobado;
       } else {
         console.log(
           "Préstamo rechazado: Historial crediticio no satisfactorio",
         );
-        return aprobado;
       }
     }
+    return aprobado;
   }
 }
 
